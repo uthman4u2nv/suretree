@@ -19,7 +19,7 @@ namespace suretree.Controllers
             pe = p;
         }
         
-        [HttpGet("person/{int Id}")]
+        [HttpGet("person/{Id}")]
         public async Task<ActionResult> GetPerson(int Id)
         {
             return Ok(pe.GetById(Id));
@@ -34,7 +34,7 @@ namespace suretree.Controllers
         [HttpGet("person")]
         public async Task<IEnumerable<User>> ListUser()
         {
-            return Ok(pe.list());
+            return pe.list();
         }
 
 
